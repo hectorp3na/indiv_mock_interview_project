@@ -5,6 +5,12 @@ export const theme = {
 };
 export const plugins = [];
 
+module.exports = {
+  content: [
+    './app/globals.css',
+  ]
+}
+
 
 module.exports = {
   theme: {
@@ -39,11 +45,13 @@ module.exports = {
 
 module.exports = {
   plugins: [
-    require('tailwindcss-animate')
+    require('tailwindcss-animate'),
+    require('tailwindcss'),
+    require('autoprefixer'),
   ],
 };
 
 
 module.exports = {
-  darkMode: 'class', // or 'media'
+  darkMode: ['class', '[data-theme="dark"]']
 };
