@@ -1,4 +1,7 @@
-@import './globals.css'
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 @layer components {
     .btn-call {
@@ -131,5 +134,35 @@
   
     .card-interview .badge-text {
       @apply text-sm font-semibold capitalize;
+    }
+  }
+
+  @layer utilities {
+    .dark-gradient {
+      @apply bg-gradient-to-b from-[#1A1C20] to-[#08090D];
+    }
+  
+    .border-gradient {
+      @apply bg-gradient-to-b from-[#4B4D4F] to-[#4B4D4F33];
+    }
+  
+    .pattern {
+      @apply bg-[url('/pattern.png')] bg-top bg-no-repeat;
+    }
+  
+    .blue-gradient-dark {
+      @apply bg-gradient-to-b from-[#171532] to-[#08090D];
+    }
+  
+    .blue-gradient {
+      @apply bg-gradient-to-l from-[#FFFFFF] to-[#CAC5FE];
+    }
+  
+    .flex-center {
+      @apply flex items-center justify-center;
+    }
+  
+    .animate-fadeIn {
+      animation: fadeIn 0.3s ease-in-out;
     }
   }
